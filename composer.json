@@ -1,0 +1,26 @@
+{
+    "name": "wto/deeplapitranslate",
+    "description": "To translate languages with Deep L Translator API",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "wto-asahi",
+            "email": "waithawoocw@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "Wto\\DeeplTranslate\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "wto\\DeeplTranslate\\DeeplTranslateServiceProvider"
+            ]
+        }
+    }
+}
