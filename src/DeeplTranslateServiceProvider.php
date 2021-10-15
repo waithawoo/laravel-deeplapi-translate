@@ -26,6 +26,8 @@ class DeeplTranslateServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        //
+        $this->publishes([
+            __DIR__ . '/../config/deepltranslate.php' => config_path('deepltranslate.php'),
+        ]);
     }
 }
