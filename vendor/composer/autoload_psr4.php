@@ -6,5 +6,5 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
-    'Wto\\DeeplTranslate\\' => array($baseDir . '/src'),
+    'WaiThaw\\DeeplTranslate\\' => array($baseDir . '/src'),
 );

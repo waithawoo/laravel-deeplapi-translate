@@ -1,7 +1,6 @@
 <?php
 
-// namespace App\Providers;
-namespace Wto\DeeplTranslate;
+namespace WaiThaw\DeeplTranslate;
 use Illuminate\Support\ServiceProvider;
 
 class DeeplTranslateServiceProvider extends ServiceProvider

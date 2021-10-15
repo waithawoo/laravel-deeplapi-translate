@@ -1,6 +1,6 @@
 <?php
 
-namespace Wto\DeeplTranslate;
+namespace WaiThaw\DeeplTranslate;
 
 class DeeplTranslate
 {

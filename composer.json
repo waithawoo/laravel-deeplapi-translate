@@ -1,11 +1,11 @@
 {
-    "name": "wto/deeplapitranslate",
-    "description": "To translate languages with Deep L Translator API",
+    "name": "waithaw/deeplapitranslate",
+    "description": "To translate languages with Deep L Translator API in Laravel",
     "type": "library",
     "license": "MIT",
     "authors": [
         {
-            "name": "wto-asahi",
+            "name": "waithaw-asahi",
             "email": "waithawoocw@gmail.com"
         }
     ],
@@ -13,13 +13,13 @@
     "require": {},
     "autoload": {
         "psr-4": {
-            "Wto\\DeeplTranslate\\": "src/"
+            "WaiThaw\\DeeplTranslate\\": "src/"
         }
     },
     "extra": {
         "laravel": {
             "providers": [
-                "wto\\DeeplTranslate\\DeeplTranslateServiceProvider"
+                "WaiThaw\\DeeplTranslate\\DeeplTranslateServiceProvider"
             ]
         }
     }
