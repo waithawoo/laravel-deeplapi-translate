@@ -96,7 +96,7 @@ class DeeplTranslate
         $response      = json_decode($result, true);
 
         if ($httpCode != 200 && is_array($response) && array_key_exists('message', $response)) {
-            throw new DeeplException($response['message'], $httpCode);
+            throw new DeeplException("ERROR : ".$httpCode." => ".$response['message']);
         }
 
         return $response;
