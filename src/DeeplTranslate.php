@@ -17,10 +17,10 @@ class DeeplTranslate
     const API_LANGUAGE_RESOURCE = 'languages';
     const API_TRANSLATE_RESOURCE = 'translate';
 
-    public function __construct($authKey, $version = '2', $host = 'api-free.deepl.com')
+    public function __construct($version = '2')
     {
-        $this->authKey = $authKey;
-        $this->host = $host;
+        $this->authKey = config('deepltranslate.auth_key');
+        $this->host = config('deepltranslate.api_url');
         $this->version = $version;
         $this->curl = curl_init();
 
@@ -49,7 +49,7 @@ class DeeplTranslate
         $body          = $this->buildRequestData(array('text' => $text, 'source_lang' => $source_lang, 'target_lang' => $target_lang,'split_sentences'=>0));
         $translations  = $this->request($url, $body);
 
-        return $translations['translations'][0];
+        return $translations['translations'][0]['text'];
     }
     protected function buildURL($resource)
     {
