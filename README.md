@@ -1,8 +1,8 @@
 # Laravel DeepL API Translation Package
 [![GitHub issues](https://img.shields.io/github/issues/waithawoo/laravel-deeplapi-translate)](https://github.com/waithawoo/laravel-deeplapi-translate/issues)
-
 [![GitHub stars](https://img.shields.io/github/stars/waithawoo/laravel-deeplapi-translate)](https://github.com/waithawoo/laravel-deeplapi-translate/stargazers)
 [![GitHub forks](https://img.shields.io/github/forks/waithawoo/laravel-deeplapi-translate)](https://github.com/waithawoo/laravel-deeplapi-translate/network)
+[![GitHub license](https://img.shields.io/github/license/waithawoo/laravel-deeplapi-translate)](https://github.com/waithawoo/laravel-deeplapi-translate/blob/main/LICENSE)
 ## To translate languages with Deep L Translator API 
 
 Easy to use Deep L API for translation in Laravel projects
