@@ -41,7 +41,7 @@ return [
 ```
 
 ## Usage
-- After setting up the values in the config file, you can use the traslation methods.
+- After setting up the config file values in .env, you can use translation methods.
 
 Create DeeplTranslate object
 

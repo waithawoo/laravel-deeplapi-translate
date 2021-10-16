@@ -75,36 +75,31 @@ class DeeplTranslate
         // }
 
         $body = http_build_query($parameters);
-        //dd($body);
+        
         return $body;
     }
     protected function request($url, $body)
     {
-        //dd($body);
+        
         curl_setopt($this->curl, CURLOPT_POST, true);
         curl_setopt($this->curl, CURLOPT_URL, $url);
         curl_setopt($this->curl, CURLOPT_POSTFIELDS, $body);
         curl_setopt($this->curl, CURLOPT_HTTPHEADER, array('Content-Type: application/x-www-form-urlencoded'));
 
-        $response = curl_exec($this->curl);
+        $result = curl_exec($this->curl);
 
         if (curl_errno($this->curl)) {
-            // throw new DeepLException('There was a cURL Request Error : ' . curl_error($this->curl));
-            dd('There was a cURL Request Error : ' . curl_error($this->curl));
-
+            throw new DeeplException('There was a cURL Error : ' . curl_error($this->curl));
         }
 
         $httpCode      = curl_getinfo($this->curl, CURLINFO_HTTP_CODE);
-        $responseArray = json_decode($response, true);
+        $response      = json_decode($result, true);
 
-        if ($httpCode != 200 && is_array($responseArray) && array_key_exists('message', $responseArray)) {
-            // throw new DeepLException($responseArray['message'], $httpCode);
-            dd($responseArray['message'], $httpCode);
-
+        if ($httpCode != 200 && is_array($response) && array_key_exists('message', $response)) {
+            throw new DeeplException($response['message'], $httpCode);
         }
-        //dd($responseArray);
 
-        return $responseArray;
+        return $response;
 
     }
 
