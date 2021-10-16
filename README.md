@@ -5,8 +5,8 @@
 [![GitHub license](https://img.shields.io/github/license/waithawoo/laravel-deeplapi-translate)](https://github.com/waithawoo/laravel-deeplapi-translate/blob/main/LICENSE)
 
 ## To translate languages with Deep L Translator API 
+
 Easy to use Deep L API for translation in Laravel projects
----
  - **[Installation](#installation)**
  - **[Usage](#usage)**
 
