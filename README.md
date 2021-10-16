@@ -41,7 +41,7 @@ return [
 ];
 ```
 
-## Basic Usage
+## Usage
 - After setting up the values in the config file, you can use the traslation methods.
 
 Create DeeplTranslate object
