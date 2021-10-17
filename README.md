@@ -43,7 +43,7 @@ return [
 ## Usage
 - After setting up the config file values in .env, you can use translation methods.
 
-Create DeeplTranslate object
+### Create DeeplTranslate object
 
 ```php
 use WaiThaw\DeeplTranslate\DeeplTranslate;
