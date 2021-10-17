@@ -51,21 +51,50 @@ use WaiThaw\DeeplTranslate\DeeplTranslate;
 $deepl = new DeeplTranslate();
 ```
 
-Translate texts
+### Translate
 ```php
 // parameters are $text, $source_language, $target_language
-$deepl->translate('are you hungry?', 'EN', 'JA') // Output translated text string
+$translated_text = $deepl->translate('are you hungry?', 'EN', 'JA'); // Output translated text string
+
+echo $translated_text;
 ```
 
-Get supported languages
+### Supported languages
 ```php
-$languages = $deepl->languages('target'); // parameter is $type ['target', 'source']. Default is null.
-
+$languages = $deepl->languages();
 foreach($languages as $lang){
-    
-    echo $lang['language'] - $lang['name'].'<br>';
+    echo $lang['language']."-".$lang['name'].'<br>';
 }
 ```
+For supported Source-languages
+```php
+$source_languages = $deepl->languages('source');
+foreach($source_languages as $lang){
+    echo $lang['language']."-".$lang['name'].'<br>';
+}
+```
+
+For supported Target-languages
+```php
+$target_languages = $deepl->languages('target');
+foreach($target_languages as $lang){
+    echo $lang['language']."-".$lang['name'].'<br>';
+}
+```
+
+### Monitoring Usage
+You can monitor the number of traslated characters and maximun limitations
+```php
+$usage= $deepl->usage();
+echo $usage['character_count'].' characters have been used. Maximum number of characters that can be translated in the current billing period are '.$usage['character_limit'];
+```
+
+### Setting for cURL timeout
+You can setup a timeout to prevent waiting in case of api unreachable
+```php
+$deepl->setTimeout(10);
+```
+
 ## Security
 
 If you discover any security related issues, please email them to [waithawoocw@gmail.com](mailto:waithawoocw@gmail.com) instead of using the issue tracker.
