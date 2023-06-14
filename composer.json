@@ -5,12 +5,14 @@
     "license": "MIT",
     "authors": [
         {
-            "name": "waithawoo",
+            "name": "Wai Thaw Oo",
             "email": "waithawoocw@gmail.com"
         }
     ],
     "minimum-stability": "dev",
-    "require": {},
+    "require": {
+        "php": ">=7.3"
+    },    
     "autoload": {
         "psr-4": {
             "WaiThaw\\DeeplTranslate\\": "src/"
